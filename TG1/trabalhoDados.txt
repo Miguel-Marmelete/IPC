@@ -1,0 +1,48 @@
+Tema: Reminder App
+Sistemas semelhantes: Calendário do android (marca compromissos e dá para escolher quando ser notificado)
+
+Persona:
+
+Nome: João
+idade: 21 anos
+sexo: Masculino
+Nivel de escolaridade: 12º ano (atualmente a tirar engenahria informática)
+Experiência em informática: utilizador experiente
+Como obter mais informações: Contactar diretamente o utilizador e realizar um questionário.
+O João poderá estar interessado na aplicação devido á quantidade de trabalhos que tem para entregar.
+
+
+
+Cenário de utilização:
+O João é aluno de engenharia informática no Instituto Politécnico de Beja,
+normalmente o joão tem 5 disciplinas por semestre e em cada disciplina 
+tem por volta de3 trabalhos. Sendo ele um pouco esquecido e a quantidade
+de trabalhso elevada, o João usa a aplicação do calendário para marcar 
+as datas das entregas dos trabalhos e também outros compromissos
+como quando se tem que juntar com membros dos grupos de trabalho.
+
+
+Análise de Tarefas:
+
+Criar tarefas com data limite;
+Adicionar lembretes para cada tarefa;
+editar tarefa;
+Marcar tarefas concluidas (antes do prazo da tarefa);
+Notificação da aproximação do prazo da tarefa;
+
+
+Funcionalidades:
+
+A aplciação deverá ter um botão "Add Task" que permite criar uma nova tarefa e escolher a deadline;
+A aplicação deverá ter dentro do container de cada tarefa um botão para adicionar lembrete e uma checkbox para marcar
+quando a tarefa estiver concluida;
+Ao ficar a carregar deve ser possivel editar a tarefa;
+Notificar o utilizador com uma mensagen do sistema quando a deadline estiver próxima (colcoar um tempo por defaul e se
+o utilizador quiser deve conseguir mudar);
+
+
+Estilo e dispositivos de interação:
+
+Estilo de interação baseado em ícones: Esse estilo utiliza ícones e botões gráficos para representar funções e recursos.
+ É comum em aplicativos móveis e oferece uma interface visualmente atraente e intuitiva.
+Dispositivos de interação: Smartphone (ecrã)
