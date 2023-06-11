@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RemindDo</string>
+    <string name="ano">Ano</string>
+    <string name="descri_o">Descrição:</string>
+    <string name="dia">Dia</string>
+    <string name="inserir_data">Inserir Data:</string>
+    <string name="nome_do_alarme">Nome do Alarme:</string>
+    <string name="m_s">Mês</string>
+    <string name="adicionar_alarme">Adicionar Alarme</string>
+    <string name="inserir_hora">Inserir Hora:</string>
+    <string name="hh">HH</string>
+    <string name="mm">MM</string>
+    <string name="criar_alarme">Criar Alarme</string>
+    <string name="mostrar_alarmes">Mostrar Alarmes</string>
+    <string name="alarmes_pr_ximos">Alarmes Próximos</string>
+</resources>

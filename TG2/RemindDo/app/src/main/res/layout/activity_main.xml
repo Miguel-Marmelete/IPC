@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <Button
+        android:id="@+id/criar_alarme_btn"
+        android:layout_width="173dp"
+        android:layout_height="35dp"
+        android:text="@string/criar_alarme"
+        app:layout_constraintBottom_toBottomOf="@+id/mostrar_alarmes_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mostrar_alarmes_btn"
+        app:layout_constraintTop_toTopOf="@+id/mostrar_alarmes_btn"
+        android:onClick="createAlarm"
+        />
+
+    <Button
+        android:id="@+id/mostrar_alarmes_btn"
+        android:layout_width="173dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/mostrar_alarmes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/alarme_proximso_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/alarmes_pr_ximos"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mostrar_alarmes_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mostrar_alarmes_btn"
+        app:layout_constraintTop_toBottomOf="@+id/mostrar_alarmes_btn"
+        app:layout_constraintVertical_bias="0.071" />
+
+        <ScrollView
+            android:id="@+id/alarmes_scroll_view"
+            android:layout_width="278dp"
+            android:layout_height="402dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/alarme_proximso_text_view"
+            app:layout_constraintStart_toStartOf="@+id/alarme_proximso_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/alarme_proximso_text_view"
+            app:layout_constraintVertical_bias="0.177">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

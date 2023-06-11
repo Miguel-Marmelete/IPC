@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/alarm_details_description_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Description:"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/alarm_details_hour_minutes_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_details_hour_minutes_text_view" />
+
+    <TextView
+        android:id="@+id/alarm_details_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_details_description_text_view"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/alarm_details_hour_minutes_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Hora:"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/alarm_details_data_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_details_data_text_view" />
+
+    <TextView
+        android:id="@+id/alarm_details_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarm_details_hour_minutes_text_view"
+        app:layout_constraintStart_toEndOf="@+id/alarm_details_hour_minutes_text_view"
+        app:layout_constraintTop_toTopOf="@+id/alarm_details_hour_minutes_text_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/alarm_details_data_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Data:"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/alarm_details_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_details_name_text_view" />
+
+    <TextView
+        android:id="@+id/alarm_details_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarm_details_data_text_view"
+        app:layout_constraintStart_toEndOf="@+id/alarm_details_data_text_view"
+        app:layout_constraintTop_toTopOf="@+id/alarm_details_data_text_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/alarm_details_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:text="Nome:"
+        android:textColorHint="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/alarm_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/alarm_details_name_text_view"
+        app:layout_constraintStart_toEndOf="@+id/alarm_details_name_text_view"
+        app:layout_constraintTop_toTopOf="@+id/alarm_details_name_text_view" />
+
+    <Button
+        android:id="@+id/delete_alarm_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete Alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_details_description"
+        android:onClick="deleteAlarm"
+        />
+</android.support.constraint.ConstraintLayout>
