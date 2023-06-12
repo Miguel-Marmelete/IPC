@@ -42,9 +42,12 @@ public class ThirdActivity extends AppCompatActivity {
 
 
     public void deleteAlarm(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("alarmToDelete",alarm);
-        startActivityForResult(intent, DELETE_ALARM_REQUEST_CODE);
+        Intent intent = new Intent();
+        int alarmId = this.getIntent().getIntExtra("alarmID",-1);
+
+        intent.putExtra("alarmID",alarmId);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
 }

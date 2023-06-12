@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int CREATE_ALARM_REQUEST_CODE = 1;
     private static final int DELETE_ALARM_REQUEST_CODE = 2;
+    private static final int ALARM_DETAILS_REQUEST_CODE = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +30,34 @@ public class MainActivity extends AppCompatActivity {
         listaAlarmes = new ArrayList<>();
         listaAlarmesView = new ArrayList<>();
         linearLayout = findViewById(R.id.linear_layout);
+
+
     }
     public void createAlarm(View view){
         Intent intent = new Intent(this, SecondActivity.class);
         startActivityForResult(intent, CREATE_ALARM_REQUEST_CODE);
     }
     public void alarmDetails(View view){
+
         TextView clickedTextView = (TextView) view;
-        int viewId = clickedTextView.getId();
-        Alarm alarm = listaAlarmes.get(viewId);
+        int alarmID = clickedTextView.getId();
+        Log.d("MainActivity view ID", String.valueOf(alarmID));
+        Alarm alarm = listaAlarmes.get(alarmID);
+        Intent intent = new Intent(this, ThirdActivity.class);
+        intent.putExtra("alarm",alarm);
+        intent.putExtra("alarmID",alarmID);
+        startActivityForResult(intent, ALARM_DETAILS_REQUEST_CODE);
+        /*
         Intent intent = new Intent(this, ThirdActivity.class);
         intent.putExtra("alarm",alarm);
         startActivity(intent);
+        *
+         */
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.d("On Activity Resultr", "" + requestCode + " "+ resultCode);
 
         if (requestCode == CREATE_ALARM_REQUEST_CODE && resultCode == RESULT_OK) {
             Alarm alarm = (Alarm) data.getSerializableExtra("alarm");
@@ -54,15 +67,29 @@ public class MainActivity extends AppCompatActivity {
                 drawAlarms(listaAlarmes);
             }
         }
-        if (requestCode == DELETE_ALARM_REQUEST_CODE && resultCode == RESULT_OK) {
-            Alarm alarm = (Alarm) data.getSerializableExtra("alarmToDelete");
-            if (alarm != null) {
-                listaAlarmes.remove(listaAlarmes.indexOf(alarm));
+        if (requestCode == ALARM_DETAILS_REQUEST_CODE && resultCode == RESULT_OK) {
+
+            int alarmId = data.getIntExtra("alarmID",-1);
+            if (alarmId != -1) {
+                Log.d("Antes de apagar", listaAlarmes.toString());
+                listaAlarmes.remove(alarmId);
+                Log.d("Depois de apagar", String.valueOf(listaAlarmes));
                 deleteAlarmsTextView();
                 drawAlarms(listaAlarmes);
             }
         }
-    }
+        /*
+            Alarm alarm = (Alarm) data.getSerializableExtra("alarmToDelete");
+            if (alarm != null) {
+                Log.d("Antes de apagar", listaAlarmes.toString());
+                listaAlarmes.remove(alarm);
+                Log.d("Depois de apagar", String.valueOf(listaAlarmes));
+
+                deleteAlarmsTextView();
+                drawAlarms(listaAlarmes);
+            }*/
+        }
+
     public void drawAlarms(ArrayList<Alarm> alarms){
         for(int i = 0; i<alarms.size(); i++) {
             Alarm alarm = alarms.get(i);
@@ -85,13 +112,8 @@ public class MainActivity extends AppCompatActivity {
     //Menos eficiente do que adicionar 1 a 1 mas mais fácil para quando for necessário apagar 1 especifico
     // pois é só apagar só na arraylist em vez de procurar pelo ID
     public void deleteAlarmsTextView(){
-        int childCount = linearLayout.getChildCount();
-        for (int i = 0; i < childCount; i++) {
-            View childView = linearLayout.getChildAt(i);
-            if (childView instanceof TextView) {
-                linearLayout.removeView(childView);
-            }
-        }
+        linearLayout.removeAllViews();
+        listaAlarmesView.clear();
     }
 
 
