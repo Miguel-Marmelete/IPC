@@ -78,16 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 drawAlarms(listaAlarmes);
             }
         }
-        /*
-            Alarm alarm = (Alarm) data.getSerializableExtra("alarmToDelete");
-            if (alarm != null) {
-                Log.d("Antes de apagar", listaAlarmes.toString());
-                listaAlarmes.remove(alarm);
-                Log.d("Depois de apagar", String.valueOf(listaAlarmes));
 
-                deleteAlarmsTextView();
-                drawAlarms(listaAlarmes);
-            }*/
         }
 
     public void drawAlarms(ArrayList<Alarm> alarms){

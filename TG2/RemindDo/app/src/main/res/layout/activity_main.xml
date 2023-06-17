@@ -8,6 +8,49 @@
     tools:ignore="MissingDefaultResource">
 
     <Button
+        android:id="@+id/create_list_btn"
+        android:layout_width="173dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:text="Adicionar Alarme"
+        app:layout_constraintStart_toStartOf="@+id/lista_3"
+        app:layout_constraintTop_toBottomOf="@+id/lista_3" />
+
+    <Button
+        android:id="@+id/lista_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lista 3"
+        app:layout_constraintEnd_toEndOf="@+id/alarmes_scroll_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/alarmes_scroll_view"
+        app:layout_constraintTop_toBottomOf="@+id/lista_2" />
+
+    <Button
+        android:id="@+id/lista_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lista 2"
+        app:layout_constraintEnd_toEndOf="@+id/alarmes_scroll_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/alarmes_scroll_view"
+        app:layout_constraintTop_toBottomOf="@+id/lista_1" />
+
+    <TextView
+        android:id="@+id/listas_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Listas"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/alarmes_scroll_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarmes_scroll_view" />
+
+    <Button
         android:id="@+id/criar_alarme_btn"
         android:layout_width="173dp"
         android:layout_height="35dp"
@@ -44,21 +87,33 @@
         app:layout_constraintTop_toBottomOf="@+id/mostrar_alarmes_btn"
         app:layout_constraintVertical_bias="0.071" />
 
-        <ScrollView
-            android:id="@+id/alarmes_scroll_view"
-            android:layout_width="278dp"
-            android:layout_height="402dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/alarme_proximso_text_view"
-            app:layout_constraintStart_toStartOf="@+id/alarme_proximso_text_view"
-            app:layout_constraintTop_toBottomOf="@+id/alarme_proximso_text_view"
-            app:layout_constraintVertical_bias="0.177">
+    <ScrollView
+        android:id="@+id/alarmes_scroll_view"
+        android:layout_width="284dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/alarme_proximso_text_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/alarme_proximso_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarme_proximso_text_view"
+        app:layout_constraintVertical_bias="0.091">
 
-            <LinearLayout
-                android:id="@+id/linear_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/lista_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lista 1"
+        app:layout_constraintEnd_toEndOf="@+id/alarmes_scroll_view"
+        app:layout_constraintStart_toStartOf="@+id/alarmes_scroll_view"
+        app:layout_constraintTop_toBottomOf="@+id/listas_text_view" />
 
 </android.support.constraint.ConstraintLayout>
