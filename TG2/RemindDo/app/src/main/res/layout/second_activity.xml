@@ -9,6 +9,7 @@
     <EditText
         android:id="@+id/year_input"
         android:layout_width="40dp"
+
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
         android:ems="10"
@@ -116,6 +117,8 @@
     <Button
         android:id="@+id/add_alarm_btn"
         android:layout_width="0dp"
+        android:background="@color/light_blue"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:text="@string/adicionar_alarme"

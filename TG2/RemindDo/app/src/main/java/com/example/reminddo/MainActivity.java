@@ -47,12 +47,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("alarm",alarm);
         intent.putExtra("alarmID",alarmID);
         startActivityForResult(intent, ALARM_DETAILS_REQUEST_CODE);
-        /*
-        Intent intent = new Intent(this, ThirdActivity.class);
-        intent.putExtra("alarm",alarm);
-        startActivity(intent);
-        *
-         */
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -1,7 +1,9 @@
 package com.example.reminddo;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -41,13 +43,24 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
 
-    public void deleteAlarm(View view){
+    public void deleteItem( ){
         Intent intent = new Intent();
         int alarmId = this.getIntent().getIntExtra("alarmID",-1);
 
         intent.putExtra("alarmID",alarmId);
         setResult(RESULT_OK, intent);
         finish();
+    }
+    public void deleteAlarm(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Confirmation")
+                .setMessage("Are you sure you want to delete?")
+                .setPositiveButton("Yes", (dialog, which) -> {
+
+                    deleteItem();
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 
 }

@@ -13,4 +13,8 @@
     <string name="criar_alarme">Criar Alarme</string>
     <string name="mostrar_alarmes">Mostrar Alarmes</string>
     <string name="alarmes_pr_ximos">Alarmes Próximos</string>
+    <string name="adicionar_lista">Adicionar Lista</string>
+    <string name="lista_2">Lista 2</string>
+    <string name="listas">Listas</string>
+    <string name="lista_1">Lista 1</string>
 </resources>
