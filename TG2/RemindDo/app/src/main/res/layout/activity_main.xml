@@ -36,33 +36,33 @@
         android:fontFamily="sans-serif"
         android:text="@string/listas"
         android:textColor="#000000"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/alarmes_scroll_view"
         app:layout_constraintTop_toBottomOf="@+id/alarmes_scroll_view" />
 
     <Button
         android:id="@+id/criar_alarme_btn"
-        android:layout_width="173dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/light_blue"
-        android:textColor="@color/white"
+        android:onClick="createAlarm"
         android:text="@string/criar_alarme"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/mostrar_alarmes_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mostrar_alarmes_btn"
-        app:layout_constraintTop_toTopOf="@+id/mostrar_alarmes_btn"
-        android:onClick="createAlarm"
-        />
+        app:layout_constraintTop_toTopOf="@+id/mostrar_alarmes_btn" />
 
     <Button
         android:id="@+id/mostrar_alarmes_btn"
-        android:layout_width="173dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:textColor="@color/white"
-        android:background="@color/light_blue"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:background="@color/light_blue"
         android:text="@string/mostrar_alarmes"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,16 +70,16 @@
         android:id="@+id/alarme_proximso_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif"
         android:text="@string/alarmes_pr_ximos"
         android:textColor="#000000"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/mostrar_alarmes_btn"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/mostrar_alarmes_btn"
-        app:layout_constraintTop_toBottomOf="@+id/mostrar_alarmes_btn"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintTop_toBottomOf="@+id/mostrar_alarmes_btn" />
 
     <ScrollView
         android:id="@+id/alarmes_scroll_view"
@@ -97,7 +97,10 @@
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+
+
+            />
     </ScrollView>
 
     <Button

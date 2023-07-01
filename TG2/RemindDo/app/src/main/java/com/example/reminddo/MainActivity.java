@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             TextView alarmTextView = new TextView(this);
             String text = alarm.getName() + " " + formatDate(alarm.getDate()) +" " + alarm.getHour() +":"+ alarm.getMinutes();
             alarmTextView.setText(text);
-            alarmTextView.setTextSize(25);
+            alarmTextView.setTextSize(16);
             alarmTextView.setId(i);
             alarmTextView.setOnClickListener(this::alarmDetails);
             listaAlarmesView.add(alarmTextView);

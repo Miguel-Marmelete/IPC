@@ -7,19 +7,68 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/year_input"
-        android:layout_width="40dp"
-
-        android:layout_height="39dp"
-        android:layout_marginStart="32dp"
+        android:id="@+id/day_input"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/dia"
         android:inputType="number"
+        android:maxEms="3"
+        app:layout_constraintStart_toStartOf="@+id/insert_data_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/insert_data_text_view" />
+
+    <EditText
+        android:id="@+id/year_input"
+        android:layout_width="50dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
         android:hint="@string/ano"
+        android:inputType="number"
+        android:maxEms="4"
         app:layout_constraintBottom_toBottomOf="@+id/month_input"
         app:layout_constraintStart_toEndOf="@+id/month_input"
-        app:layout_constraintTop_toTopOf="@+id/month_input"
-        android:maxEms="4"
-        />
+        app:layout_constraintTop_toTopOf="@+id/month_input" />
+
+    <EditText
+        android:id="@+id/month_input"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="@string/m_s"
+        android:inputType="number"
+        android:maxEms="2"
+        app:layout_constraintBottom_toBottomOf="@+id/day_input"
+        app:layout_constraintStart_toEndOf="@+id/day_input"
+        app:layout_constraintTop_toTopOf="@+id/day_input" />
+
+    <EditText
+        android:id="@+id/minutes_input"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="@string/mm"
+        android:inputType="number"
+        android:maxEms="3"
+        app:layout_constraintBottom_toBottomOf="@+id/hour_input"
+        app:layout_constraintStart_toEndOf="@+id/hour_input"
+        app:layout_constraintTop_toTopOf="@+id/hour_input" />
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/descri_o"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/hour_input"
+        app:layout_constraintTop_toBottomOf="@+id/hour_input" />
 
     <EditText
         android:id="@+id/description_input"
@@ -27,65 +76,53 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/description_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/alarme_name_input"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/alarme_name_input"
-        app:layout_constraintTop_toTopOf="@+id/description_text_view" />
+        app:layout_constraintStart_toStartOf="@+id/description_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/description_text_view" />
 
     <TextView
-        android:id="@+id/description_text_view"
+        android:id="@+id/inserir_hora_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/descri_o"
-        android:textColorHint="#000000"
-        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:text="@string/inserir_hora"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/insert_data_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/alarm_name_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/inserir_hora_text_view" />
+        app:layout_constraintStart_toStartOf="@+id/day_input"
+        app:layout_constraintTop_toBottomOf="@+id/day_input" />
 
     <EditText
-        android:id="@+id/day_input"
-        android:layout_width="45dp"
-        android:layout_height="39dp"
+        android:id="@+id/hour_input"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/hh"
         android:inputType="number"
-        android:hint="@string/dia"
-        app:layout_constraintBottom_toBottomOf="@+id/insert_data_text_view"
-        app:layout_constraintStart_toStartOf="@+id/alarme_name_input"
-        app:layout_constraintTop_toTopOf="@+id/insert_data_text_view"
         android:maxEms="3"
-        />
+        app:layout_constraintStart_toStartOf="@+id/inserir_hora_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/inserir_hora_text_view" />
 
     <TextView
         android:id="@+id/insert_data_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:text="@string/inserir_data"
         android:textColorHint="#000000"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/alarm_name_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/alarm_name_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/alarm_name_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/alarme_name_input" />
 
     <EditText
         android:id="@+id/alarme_name_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/alarm_name_text_view"
-        app:layout_constraintTop_toTopOf="parent"
 
-        />
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/alarm_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_name_text_view" />
 
     <TextView
         android:id="@+id/alarm_name_text_view"
@@ -95,80 +132,24 @@
         android:layout_marginTop="50dp"
         android:text="@string/nome_do_alarme"
         android:textColorHint="#000000"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/month_input"
-        android:layout_width="40dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="32dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/m_s"
-        app:layout_constraintBottom_toBottomOf="@+id/day_input"
-        app:layout_constraintStart_toEndOf="@+id/day_input"
-        app:layout_constraintTop_toTopOf="@+id/day_input"
-        android:maxEms="2"
-        />
-
     <Button
         android:id="@+id/add_alarm_btn"
         android:layout_width="0dp"
-        android:background="@color/light_blue"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
+        android:background="@color/light_blue"
+        android:onClick="createAndSendAlarm"
         android:text="@string/adicionar_alarme"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="createAndSendAlarm"
-        />
-
-    <TextView
-        android:id="@+id/inserir_hora_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/inserir_hora"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/insert_data_text_view"
-        app:layout_constraintStart_toStartOf="@+id/insert_data_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/insert_data_text_view" />
-
-    <EditText
-        android:id="@+id/hour_input"
-        android:layout_width="40dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/hh"
-        app:layout_constraintBottom_toBottomOf="@+id/inserir_hora_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/day_input"
-        app:layout_constraintStart_toStartOf="@+id/day_input"
-        app:layout_constraintTop_toTopOf="@+id/inserir_hora_text_view"
-        android:maxEms="3"
-        />
-
-    <EditText
-        android:id="@+id/minutes_input"
-        android:layout_width="40dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="@string/mm"
-        app:layout_constraintBottom_toBottomOf="@+id/hour_input"
-        app:layout_constraintEnd_toEndOf="@+id/month_input"
-        app:layout_constraintStart_toStartOf="@+id/month_input"
-        app:layout_constraintTop_toTopOf="@+id/hour_input"
-        android:maxEms="3"
-        />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
