@@ -102,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
         listaAlarmesView.clear();
     }
 
+    public void showAlarms(View view) {
+        deleteAlarmsTextView();
+        drawAlarms(listaAlarmes);
+    }
+
 
 
 

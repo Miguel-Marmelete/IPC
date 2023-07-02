@@ -53,13 +53,13 @@ public class ThirdActivity extends AppCompatActivity {
     }
     public void deleteAlarm(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Confirmation")
-                .setMessage("Are you sure you want to delete?")
-                .setPositiveButton("Yes", (dialog, which) -> {
+        builder.setTitle("Confirmação")
+                .setMessage("Deseja mesmo eliminar o Alarme?")
+                .setPositiveButton("Sim", (dialog, which) -> {
 
                     deleteItem();
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Não", null)
                 .show();
     }
 
